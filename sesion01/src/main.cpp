@@ -3,6 +3,8 @@
 #include <stdio.h>
 
 void initFunc();
+void funReshape(int w, int h);
+void funDisplay();
 
 using namespace std;
 
@@ -25,10 +27,33 @@ int main(int argc, char** argv) {
  // Inicializaciones específicas
     initFunc();
     
+ // Configuración CallBacks
+    glutReshapeFunc(funReshape);
+    glutDisplayFunc(funDisplay);
     
     return 0;
 }
 
 void initFunc() {
+    
+}
+
+void funReshape(int w, int h) {
+    
+    printf("Dimensiones %dx%d pixeles\n", w, h);
+    
+}
+
+void funDisplay() {
+    
+ // Borramos el buffer de color
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+ // Dibujamos una tetera con modelo de alambre
+    glutWireTeapot(1.0f);
+    
+ // Intercambiamos los buffers
+    glutSwapBuffers();
     
 }
