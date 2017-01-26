@@ -31,6 +31,9 @@ int main(int argc, char** argv) {
     glutReshapeFunc(funReshape);
     glutDisplayFunc(funDisplay);
     
+ // Bucle principal
+    glutMainLoop();
+    
     return 0;
 }
 
