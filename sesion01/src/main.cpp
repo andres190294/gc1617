@@ -2,6 +2,8 @@
 #include <GL/freeglut.h>
 #include <stdio.h>
 
+void initFunc();
+
 using namespace std;
 
 int main(int argc, char** argv) {
@@ -20,6 +22,13 @@ int main(int argc, char** argv) {
     const GLubyte *oglVersion = glGetString(GL_VERSION);
     printf("This system supports OpenGL Version: %s\n", oglVersion);
     
+ // Inicializaciones específicas
+    initFunc();
+    
+    
     return 0;
 }
 
+void initFunc() {
+    
+}
