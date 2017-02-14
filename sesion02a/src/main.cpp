@@ -6,6 +6,7 @@ void initFunc();
 void funReshape(int w, int h);
 void funDisplay();
 void drawTriangulo();
+void drawPuntos();
 
 // Variables globales
 int w = 500;
@@ -43,7 +44,7 @@ int main(int argc, char** argv) {
 void initFunc() {
     
  // Configuracion de etapas del cauce
-    glShadeModel(GL_SMOOTH);
+    glShadeModel(GL_FLAT);
     
 }
 
@@ -76,6 +77,9 @@ void funDisplay() {
  // Dibujamos un triangulo  
     drawTriangulo();
     
+ // Dibujamos dos puntos
+    drawPuntos();
+    
  // Intercambiamos los buffers
     glutSwapBuffers();
     
@@ -94,4 +98,15 @@ void drawTriangulo() {
         glVertex3f( 0.0f,  0.5f, -2.0f);
     glEnd();
     
+}
+
+void drawPuntos() {
+
+    glPointSize(10);
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glBegin(GL_POINTS);
+        glVertex3f( 0.0f, 0.0f, -3.0f);
+        glVertex3f( 0.5f, 0.5f, -3.0f);
+    glEnd();
+
 }
