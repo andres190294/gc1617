@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
 void initFunc() {
     
  // Configuracion de etapas del cauce
-    glShadeModel(GL_FLAT);
+    glShadeModel(GL_SMOOTH);
     
 }
 
