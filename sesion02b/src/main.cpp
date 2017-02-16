@@ -74,7 +74,15 @@ void funDisplay() {
     GLfloat fovy = 50.0f, nplane = 0.1f, fplane = 20.0f;
     gluPerspective(fovy,aspectRatio,nplane,fplane);
     
+ // Para configurar las matrices M y V
+    glMatrixMode(GL_MODELVIEW);  
+    glLoadIdentity();
+    
+ // Matriz de Vista V (Cámara)
+    // Aquí cargaremos la matriz V
+    
  // Dibujamos un triangulo verde
+    glTranslatef(0.0f, 0.0f, -5.0f);
     drawTriangulo('g');
     
  // Intercambiamos los buffers
