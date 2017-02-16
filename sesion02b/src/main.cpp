@@ -89,8 +89,8 @@ void funDisplay() {
     glTranslatef(-1.0f, 0.0f, desZ);
     glRotatef(rotY, 0.0f, 1.0f, 0.0f);
     drawTriangulo('g');
-    
-    glTranslatef(1.0f, 0.0f, 0.0f);
+    glLoadIdentity();
+    glTranslatef(1.0f, 0.0f, desZ);
     drawTriangulo('r');
     
  // Intercambiamos los buffers
