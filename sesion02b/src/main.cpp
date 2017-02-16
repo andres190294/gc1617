@@ -86,6 +86,7 @@ void funDisplay() {
     // Aquí cargaremos la matriz V
     
  // Dibujamos un triangulo verde
+    glRotatef(rotY, 0.0f, 1.0f, 0.0f);
     glTranslatef(0.0f, 0.0f, desZ);
     drawTriangulo('g');
     
