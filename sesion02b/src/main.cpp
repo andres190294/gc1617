@@ -86,11 +86,15 @@ void funDisplay() {
     // Aquí cargaremos la matriz V
     
  // Dibujamos un triangulo verde y otro rojo
-    glTranslatef(-1.0f, 0.0f, desZ);
-    glRotatef(rotY, 0.0f, 1.0f, 0.0f);
-    drawTriangulo('g');
-    glLoadIdentity();
-    glTranslatef(1.0f, 0.0f, desZ);
+    glTranslatef(0.0f, 0.0f, desZ);
+    
+    glPushMatrix();
+        glTranslatef(-1.0f, 0.0f, 0.0f);
+        glRotatef(rotY, 0.0f, 1.0f, 0.0f);
+        drawTriangulo('g');
+    glPopMatrix();
+
+    glTranslatef(1.0f, 0.0f, 0.0f);
     drawTriangulo('r');
     
  // Intercambiamos los buffers
